@@ -1,4 +1,4 @@
-// io操作引入
+// io操作引入预导入内容
 use std::io::prelude::*;
 // 网络监听绑定
 use std::net::TcpListener;
@@ -26,7 +26,7 @@ fn main() {
         println!("error to bind port !")
     }
 }
-// 读取请求
+// 读取请求并响应
 fn hand_connection(mut stream: TcpStream) {
     // 声明存放数据的buffer
     let mut buffer = [0; 512];
