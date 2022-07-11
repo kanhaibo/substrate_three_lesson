@@ -35,6 +35,13 @@ fn hand_connection(mut stream: TcpStream) {
     let mut buffer = [0; 512];
     // 判断是否读取完整
     let mut done = true;
+    // loop {
+    //     let bytes_read = stream.read(&mut buffer).unwrap();
+    //     if bytes_read < 512 {
+    //         break;
+    //     }
+    // }
+
     // 读取内容到buffer
     while done {
         let bytes_read = stream.read(&mut buffer).unwrap();
